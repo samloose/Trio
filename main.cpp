@@ -2,6 +2,7 @@
 using namespace std;
 
 // <-- ADD YOUR FUNCTION PROTOTYPE HERE
+void swapNumbers(int&,int&,int&);
 
 int main()
 {
@@ -13,7 +14,9 @@ int main()
 
 
   // <-- ADD YOUR FUNCTION CALL HERE
+  swapNumbers(red, green, blue);
 
+  
 
   //DO NOT CHANGE WITHIN THIS AREA...
   cout<<"Rearranged....\n";
@@ -23,3 +26,25 @@ int main()
 }
 
 // <-- ADD YOUR FUNCTION DEFINITON HERE
+void swapNumbers(int &a,int &b,int &c)
+{
+    int temp;
+    if(b>a)
+    {
+       temp = b;
+       b = a;
+       a = temp;
+    }
+    if(c>a)
+    {
+        temp = c;
+        c = a;
+        a = temp;
+    }
+    if(c>b)
+    {
+        temp = c;
+        c = b;
+        b = temp;
+    }
+}
